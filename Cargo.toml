@@ -112,7 +112,7 @@ softbuffer = { version = "0.4.0", default-features = false, features = [
     "wayland-dlopen",
 ] }
 
-[target.'cfg(target_os = "android")'.dependencies]
+[target.'cfg(all(target_os = "android", any()))'.dependencies]
 android-activity = "0.6.0"
 ndk = { version = "0.9.0", default-features = false }
 
