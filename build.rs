@@ -7,7 +7,7 @@ fn main() {
     // Setup cfg aliases.
     cfg_aliases! {
         // Systems.
-        android_platform: { target_os = "android" },
+        //android_platform: { target_os = "android" },
         web_platform: { all(target_family = "wasm", target_os = "unknown") },
         macos_platform: { target_os = "macos" },
         ios_platform: { target_os = "ios" },
