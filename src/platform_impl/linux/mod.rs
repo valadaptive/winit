@@ -1026,7 +1026,7 @@ fn min_timeout(a: Option<Duration>, b: Option<Duration>) -> Option<Duration> {
     a.map_or(b, |a_timeout| b.map_or(Some(a_timeout), |b_timeout| Some(a_timeout.min(b_timeout))))
 }
 
-#[cfg(target_os = "linux")]
+#[cfg(any(target_os = "linux", target_os = "android"))]
 fn is_main_thread() -> bool {
     rustix::thread::gettid() == rustix::process::getpid()
 }
